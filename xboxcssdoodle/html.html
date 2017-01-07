@@ -1,0 +1,238 @@
+<html>
+<head>
+
+       <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script type="text/javascript">
+        setTimeout(function(){
+
+    var audio = new Audio('Achievement-mp3-sound.mp3');
+    audio.play();
+}, 1000);
+    
+    </script>
+<style type="text/css">
+
+    body{
+        color: white;
+        background-color: rgba(0,0,0,0.2);
+    }
+    
+#achievement,#xoneachievement{
+    margin-top: 50px;
+    height: 60px;
+    width: 60px;
+    background-color: 4d4d4d;
+    border-radius: 30px;
+	position:relative;
+		 -webkit-transition:width 0.5s;
+    transition: width 0.5s;
+    border:  3px solid gray;
+}
+
+#achievement.out {
+    width: 350px;
+}
+
+#achievementTitle{
+color:white;
+font-size:20px;
+    display: block;
+    margin-left: 75px;
+     white-space: nowrap;
+  overflow: hidden;
+}
+
+#achievementDescription{
+color:white;
+    display: block;
+	    text-overflow: clip;
+	    overflow-x: hidden;
+    margin-left: 75px;
+	    position: relative;
+     white-space: nowrap;
+  overflow: hidden;
+   
+}
+
+#achievementText{
+	top: 9px;
+    position: relative;	
+	
+}
+
+
+#circle,#xcircle{
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    margin: 2px;
+}
+
+    #xcircle{
+        
+        background-color: #62B823;
+        width: 60px;
+    height: 60px;
+        margin:0;
+    background-image: url(cup.jpg);
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+        top:0;
+        left:0;
+    }
+    
+    #xoneachievement{
+        width:350px;
+        border: none;
+        background-color: #03770C; 
+    }
+    
+div.outer{
+position:relative;
+  width:100px;
+  height:100px;
+  background-color:#3c9dbf;
+
+ 
+}
+
+@keyframes example {
+    0%   {width:40%;height:40%;border-radius:50%;}
+    25%  {width:55%;height:55%;border-radius:50%;}
+	50%  {width:70%;height:70%;border-radius:50%;}
+	75%  {width:85%;height:85%;border-radius:50%;}
+	90%  {width:95%;height:95%;border-radius:50%;}
+    100% {width:100%;height:100%; border-radius:0;}
+}
+
+
+div.inner{
+
+   width:40%;
+   height:40%;
+   background-color:blue;
+       z-index: 1;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    border-radius: 50%;
+}
+
+div.inner:hover{
+    animation: example 0.25s linear;
+	 -webkit-animation-fill-mode: forwards; 
+    
+}
+
+#circle span:nth-child(1) {
+    border-radius: 25px 0 0 0;
+    -moz-border-radius: 25px 0 0 0;
+    -webkit-border-radius: 25px 0 0 0;
+    background-color: #75aa1e; /* make the bar green */
+}
+#circle span:nth-child(2) {
+    border-radius: 0px 25px 0 0;
+    -moz-border-radius: 0 25px 0 0;
+    -webkit-border-radius: 0 25px 0 0;
+    left: 28px;
+}
+#circle span:nth-child(3) {
+    border-radius: 0 0 25px 0;
+    -moz-border-radius: 0 0 25px 0;
+    -webkit-border-radius: 0 0 25px 0;
+    left: 28px;
+    top: 28px;
+}
+#circle span:nth-child(4) {
+    border-radius: 0 0 0 25px;
+    -moz-border-radius: 0 0 0 25px;
+    -webkit-border-radius: 0 0 0 25px;
+    top: 28px;
+}
+
+span{
+    display: block;
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    background-color: #494949;
+    left: 3px;
+    top: 3px;
+}
+
+span.logo{
+    left: 10px;
+    top: 10px;
+    background-image: url(xboxlogo.png);
+    background-size: contain;
+    position: absolute;
+    display: block;
+    height: 30px;
+    width: 30px;
+    border: 2px solid #161616;
+    border-radius: 30px;
+    //background-color: white;
+}
+
+
+</style>
+
+<script type="text/javascript">
+
+setTimeout(function(){
+
+document.getElementById("achievement").className = "out";
+
+},1000);
+
+</script>
+
+</head>
+<body>
+
+<div class="outer" style="display:none;">
+
+<div class="inner">
+
+</div>
+
+</div>
+
+
+<div id="achievement">
+
+<div id="circle">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span class="logo"></span>
+</div>
+<div id="achievementText">
+<div id="achievementTitle">Achievement Unlocked!</div>
+<div id="achievementDescription">XBOX 360 Popup</div>
+</div>
+</div>
+
+
+    
+<div id="xoneachievement">
+    
+    <div id="xcircle"></div>
+        
+    <div id="achievementText">
+<div id="achievementTitle">Achievement Unlocked!</div>
+<div id="achievementDescription">XBOX ONE Popup</div>
+</div>
+    
+    </div>    
+    
+</body>
+</html>
