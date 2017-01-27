@@ -1,0 +1,29 @@
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link  rel="stylesheet" href="style.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script src="app.js" ></script>
+</head>
+
+<body ng-app="app" ng-controller="searchCtrl">
+
+
+<div id="search-container">
+
+<input id="search-box" type="text" placeholder="Search.." ng-model="searchString" ng-change="getResults()"/>
+
+<div id="search-results" ng-if="searchResults.length!==0">
+
+<div id="result" ng-repeat="result in searchResults">
+    {{result.Result}} - {{result.ID}}
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
